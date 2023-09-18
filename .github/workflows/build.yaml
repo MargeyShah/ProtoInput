@@ -16,7 +16,11 @@ jobs:
     
     # dotnet build and publish
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: |
+       cd src/ProtoInput
+       echo "$(pwd)"
+       ls
+       dotnet build --configuration Release
     - name: dotnet publish
       run: |
         cd src/ProtoInput
