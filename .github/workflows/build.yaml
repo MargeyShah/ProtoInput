@@ -20,5 +20,6 @@ jobs:
     - name: dotnet publish
       run: |
         cd src/ProtoInput
+        echo "$(pwd)"
         ls
         dotnet publish -c Release -o dotnetcorewebapp 
